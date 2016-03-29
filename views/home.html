@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+    <head>
+        <title>Mookit&TRADE; Chat Prototype</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/static/css/messenger_style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="login">
+            <input type="text" placeholder="Choose a nickname" id="nick">
+            <input type="button" value="Join" onclick="join()">
+            <span id="error"></span>
+        </div>
+
+        <div class="row" style="position: fixed; height: 100%; width: 100%; display: none;" id="chat-room">
+            <div class="col-30 users-online" >
+                <ul id="users-online">
+                    <li>Anurag</li>
+                    <li>Batman</li>
+                    <li>Darkseid</li>
+                    <li>Spectre</li>
+                    <li>Lex Luthor</li>
+                    <li>Metron</li>
+                    <li>Flash</li>
+                    <li>Superman</li>
+                    <li>Wonder Woman</li>
+
+                </ul>
+            </div>
+            <div class="col-70">
+                <div class="row title" id="title">Select somebody to chat</div>
+                <div class="row messages" id="messages">
+<!--                    <div class="row message">
+                        <div class="col-10">A</div>
+                        <div class="col-90">Here comes the message
+                            Here comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the messageHere comes the message
+                        </div>
+                    </div>-->
+
+                </div>
+                <div class="row edit-box">
+                    <input type="text" id="edit-box" placeholder="Type a message...">
+                </div>
+            </div>
+        </div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+        <script src="/static/js/webapp.js"></script>
+    </body>
+</html>
+

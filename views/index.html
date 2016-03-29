@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mookit Chat Prototype</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+</head>
+<body>
+<div id="login">
+	<input type="text" placeholder="Choose a nickname" id="nick">
+	<input type="button" value="Join" onclick="join()">
+	<span id="error"></span>
+</div>
+
+<div id="chat-room">
+	<ul id="users-online"></ul>
+	<input type="text" placeholder="Type your message. Enter to send" id="edit-box">
+	<ul id="messages"></ul>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+<script src="/static/js/app-ui.js"></script>
+</body>
+</html>
