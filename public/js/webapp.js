@@ -50,7 +50,7 @@ socket.on('chat message', function (msg) {
         otherU.html('<b>' + fromU);
         PLING_AUDIO.play();
     }
-    updateMessageView();
+//    updateMessageView();
 });
 
 // Socket io setup completed
@@ -93,6 +93,7 @@ function parseMessage(msg) {
 function sendMessage(msg) {
     console.log('Sending message: ' + msg + ' to: ' + CURRENTLY_CHATTING);
     var msg = parseMessage(msg);
+    MESSAGES[CURRENTLY_CHATTING].push(msg);
     $('#messages').append(makeMessageBock(msg));
     socket.emit('chat message', msg);
 }
